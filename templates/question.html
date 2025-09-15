@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Question {{q_num}}</title>
+</head>
+<body>
+    <h2>Question {{ q_num }} of {{ total }}</h2>
+    <p>{{ question.text }}</p>
+    <form method="post">
+        <button type="submit" name="answer" value="True">True</button>
+        <button type="submit" name="answer" value="False">False</button>
+    </form>
+</body>
+</html>
