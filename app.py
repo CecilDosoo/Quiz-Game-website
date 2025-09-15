@@ -4,18 +4,15 @@ from question_model import Question
 from quiz_brain import QuizBrain
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key"
+app.secret_key = "key"
 
 @app.route('/')
 def index():
-    # Create Question objects
     question_data = get_question_data()
     question_bank = [Question(q["question"], q["correct_answer"]) for q in question_data]
 
-    # Initialize QuizBrain
     quiz = QuizBrain(question_bank)
 
-    # Save quiz state in session
     session['questions'] = [{"text": q.text, "answer": q.answer} for q in question_bank]
     session['question_number'] = 0
     session['score'] = 0
@@ -37,8 +34,7 @@ def question():
         user_answer = request.form['answer']
         correct_answer = current_question['answer']
 
-        # Use QuizBrain check_answer
-        quiz = QuizBrain([])  # dummy list
+        quiz = QuizBrain([])
         quiz.score = session['score']
         quiz.question_number = session['question_number']
 
@@ -64,3 +60,4 @@ def result():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
