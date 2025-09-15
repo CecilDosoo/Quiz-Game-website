@@ -2,7 +2,8 @@
 
 This project is a simple Quiz Game application built using Python and Flask. It fetches question data from an external API, manages quiz logic, and provides an interactive web interface for users to play the quiz in their browser.
 
-https://github.com/user-attachments/assets/071a3ab9-df68-4771-b637-ab24d9b32b07
+
+https://github.com/user-attachments/assets/9211c9db-0250-4bde-bd11-a60ca658462a
 
 ---
 
