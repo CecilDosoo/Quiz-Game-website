@@ -108,4 +108,3 @@ The `templates/` folder contains the HTML files used to render the web pages.
 
 ---
 
-This version demonstrates **modular design**, separating data fetching, quiz logic, and web interface — showcasing clean software engineering practices in a web application.
